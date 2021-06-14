@@ -2902,6 +2902,7 @@ html[lang^="nm"] #search input[type=text] {
     border-bottom: 2px solid #222 !important;
     background: transparent;
     color: #eee !important;
+    box-shadow: 0 0 inset !important;
 }
 
 html[lang^="nm"] .searchpane {
