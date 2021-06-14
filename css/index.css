@@ -32,18 +32,28 @@
    For a solid color, remove first 4 lines and add 'background: #444;' */
 
 .morelink {
-    background: -webkit-radial-gradient(50% 190%, circle cover, #5f5f5f 0%, #545454 50%, #3f3f3f 100%) #444;
-    background: -o-radial-gradient(50% 190%, circle cover, #5f5f5f 0%, #545454 50%, #3f3f3f 100%) #444;
-    background: -moz-radial-gradient(50% 190%, circle cover, #5f5f5f 0%, #545454 50%, #3f3f3f 100%) #444;
-    background: -ms-radial-gradient(50% 190%, circle cover, #5f5f5f 0%, #545454 50%, #3f3f3f 100%) #444;
+    background: #fafbfc;
+    border: 1px solid rgba(27,31,35,0.15) !important;
+    box-shadow: 0 1px 0 rgba(27,31,35,0.04),inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: 0.2s cubic-bezier(0.3,0,0.5,1);
+    transition-property: color,background-color,border-color;
+    border-radius: 6px !important;
+}
+
+.morelink a {
+    color: #24292e !important;
+}
+
+.morelink a:first-letter {
+    text-transform: capitalize;
 }
 
 /* Color of the submit buttons on hover. */
 
 .morelink:hover {
-    background: #333;
+    background: #f3f4f6;
+    transition-duration: 0.1s;
 }
-
 
 
 /*** Note ***/
@@ -90,20 +100,20 @@
 }
 
 .linkflair-purple .linkflairlabel, .flair-purple[title] {
-    background: #8362b4;
-    border: 1px solid #8362b4;
+    background: #6f42c1;
+    border: 1px solid #6f42c1;
     color: #fff;
 }
 
 .linkflair-green .linkflairlabel, .flair-green[title] {
-    background: rgb(40, 167, 69);
-    border: 1px solid rgb(40, 167, 69);
+    background: #28a745;
+    border: 1px solid #28a745;
     color: #fff;
 }
 
 .linkflair-red .linkflairlabel, .flair-red[title] {
-    background: #cb2431;
-    border: 1px solid #cb2431;
+    background: #d73a49;
+    border: 1px solid #d73a49;
     color: #fff;
 }
 
@@ -114,38 +124,26 @@
 }
 
 .linkflair-yellow .linkflairlabel, .flair-yellow[title] {
-    background: #fde025;
-    border: 1px solid #fde025;
+    background: #ffd33d;
+    border: 1px solid #ffd33d;
     color: #fff;
 }
 
 .linkflair-pink .linkflairlabel, .flair-pink[title] {
-    background: #fc9cf2;
-    border: 1px solid #fc9cf2;
-    color: #fff;
-}
-
-.linkflair-lime .linkflairlabel, .flair-lime[title] {
-    background: #c6e569;
-    border: 1px solid #c6e569;
+    background: #ea4aaa;
+    border: 1px solid #ea4aaa;
     color: #fff;
 }
 
 .linkflair-gray .linkflairlabel, .flair-gray[title] {
-    background: #666;
-    border: 1px solid #666;
+    background: #6a737d;
+    border: 1px solid #6a737d;
     color: #fff;
 }
 
 .linkflair-orange .linkflairlabel, .flair-orange[title] {
-    background: #ff9f4f;
-    border: 1px solid #ff9f4f;
-    color: #fff;
-}
-
-.linkflair-teal .linkflairlabel, .flair-teal[title] {
-    background: #55c3c0;
-    border: 1px solid #55c3c0;
+    background: #f66a0a;
+    border: 1px solid #f66a0a;
     color: #fff;
 }
 
@@ -212,13 +210,17 @@
 }
 
 .flairselector li:hover {
-    background: #f2f2f2;
+    background: #f6f8fa;
     border: 0;
 }
 
 .flairselector li.selected {
-    background: #f2f2f2;
+    background: #0366d6;
     border: 0;
+}
+
+.flairselector li a {
+    color: #24292e !important;
 }
 
 .flairselector form .flair {
@@ -231,17 +233,18 @@
 }
 
 .titlebox .tagline .flairselector.drop-choices {
-    width: 275px !important;
-    padding: 10px !important;
-    top: 32px !important;
-    background: #f9f9f9;
+    width: 285px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    top: 100% !important;
+    background: #fff;
     right: 0;
-    left: auto!important;
-    border: none;
-    border-top: 1px solid #f0f0f0;
-    box-shadow: none;
+    left: 0 !important;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 8px 24px rgba(149,157,165,0.2);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
     font-size: 11px;
+    border-radius: 6px;
 }
 
 .side a[href="http://www.google.com/"] {
@@ -714,11 +717,11 @@ span.hover.pagename.redditname {
 }
 
 .thing.stickied a.title {
-    color: rgb(40, 167, 69) !important;
+    color: #28a745 !important;
 }
 
 .thing.stickied a.title:visited, .thing.stickied a.title.visited, .tagline .stickied-tagline, .thing.stickied a.author {
-    color: rgb(40, 167, 69);
+    color: #28a745;
 }
 
 .error {
@@ -1203,7 +1206,7 @@ a.thumbnail.self {
 }
 
 .thing.stickied a.author {
-    background: rgb(40, 167, 69) !important;
+    background: #28a745 !important;
     color: #fff;
     font-weight: bold;
     padding: 2px 4px;
@@ -1216,7 +1219,7 @@ a.thumbnail.self {
 }
 
 .thing .tagline .author.moderator {
-    background: rgb(40, 167, 69) !important;
+    background: #28a745 !important;
     color: #fff;
     font-weight: bold;
     padding: 2px 4px !important;
@@ -1232,7 +1235,7 @@ a.thumbnail.self {
 }
 
 .tagline .moderator, .green {
-    color: rgb(40, 167, 69);
+    color: #28a745;
 }
 
 .new-comment .usertext-body {
@@ -1249,8 +1252,13 @@ pre {
     background-color: #f6f6f6 !important;
     border-radius: 5px !important;
     margin: 0 !important;
-    padding: 12px !important;
+    padding: 12px;
     overflow: auto !important;
+}
+
+ul.image-preview-list .description pre {
+    padding: 3px;
+    margin: 2px !important;
 }
 
 /*** SIDEBAR ***/
@@ -1397,26 +1405,34 @@ pre {
 }
 
 #search input[type=text] {
-    border: 0 !important;
-    border-bottom: 2px solid #f0f0f0 !important;
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 6px;
     font-size: 14px !important;
-    width: 295px;
+    width: 285px;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 20px;
+    color: #24292e;
+    box-shadow: inset 0 1px 0 rgba(225,228,232,0.2);
 }
 
 #search input[type=text]:focus {
     outline: none;
 }
 
+#search input[type=text]::placeholder {
+    text-transform: capitalize;
+}
+
 #searchexpando {
-    border-radius: 0px;
-    background: rgba(255,255,255,0.95);
+    border-radius: 6px;
+    background: #fff;
     margin: 0 0 5px 0;
-    border: 0;
+    border: 1px solid #e1e4e8 !important;
     position: absolute;
     z-index: 1;
-    width: 275px;
+    width: 285px;
+    box-shadow: 0 3px 6px rgba(149,157,165,0.15);
 }
 
 #searchexpando input, #searchexpando p {
@@ -1568,8 +1584,8 @@ span.subscribers {
 }
 
 .fancy-toggle-button .add:hover, .res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
-    background: rgb(40, 167, 69) !important;
-    border: 1px solid rgb(40, 167, 69) !important;
+    background: #28a745 !important;
+    border: 1px solid #28a745 !important;
     color: #fff !important;
 }
 
@@ -2046,7 +2062,7 @@ form .spacer+.spacer {
 }
 
 .bottommenu .updated {
-    color: rgb(40, 167, 69);
+    color: #28a745;
 }
 
 
@@ -2132,10 +2148,10 @@ form .spacer+.spacer {
 }
 
 .pretty-form input[type=text], .pretty-form textarea, .pretty-form input[type=password], .pretty-form input[type=number] {
-    font-size: 13px;
-    color: #444;
+    font-size: 14px;
+    color: #24292e;
     padding: 4px 8px;
-    margin: 4px 4px 4px 0;
+    margin: 4px;
 }
 
 .gray {
@@ -2195,7 +2211,8 @@ form .spacer+.spacer {
 
 .pretty-form input[type=text], .pretty-form textarea, .pretty-form input[type=password], .pretty-form input[type=number] {
     box-shadow: none;
-    border: 1px solid #ddd;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
     outline: none;
 }
 
@@ -2473,7 +2490,7 @@ ul#image-preview-list .preview img {
 }
 
 .res .thing .tagline .author.moderator {
-    background: rgb(40, 167, 69) !important;
+    background: #28a745 !important;
 }
 
 .res .thing .tagline .author.moderator:hover {
@@ -2630,7 +2647,7 @@ ul#image-preview-list .preview img {
 }
 
 .moduleToggle.enabled .toggleOn, .toggleButton.enabled .toggleOn {
-    background-color: rgb(40, 167, 69) !important;
+    background-color: #28a745 !important;
     color: #fff;
     border: none;
     line-height: 14px;
@@ -3125,36 +3142,5 @@ html[lang^="nm"] .res #RESStyleSheetTipPane-header {
     border-radius: 2px;
 }
 
-
-
-/*** DOWNLOAD BUTTONS ***/
-
-a[href*="mega.nz"], a[href*="mediafire"] {
-    border-radius: 2px;
-    text-decoration: none;
-    font-size: 0;
-    display: block;
-    width: 125px;
-    height: 35px;
-    border: 1px solid #ececec;
-    border-bottom: 2px solid #ececec;
-}
-
-a[href*="mega.nz"] {
-    background: url(%%mega%%) center center #f7f7f7 no-repeat;
-}
-
-a[href*="mediafire"] {
-    background: url(%%mediafire%%) center center #f7f7f7 no-repeat;
-}
-
-a[href*="mega.nz"]:hover, a[href*="mediafire"]:hover {
-    background-color: #fff;
-    border: 1px solid #e2e2e2;
-    border-bottom: 2px solid #e2e2e2;
-}
-
-
-
-/* [ STCKY v2.0 originally by doingstuffcarl ]
+/* [ STCKY v2.0 by doingstuffcarl ]
    [ /r/STCKY ] */
